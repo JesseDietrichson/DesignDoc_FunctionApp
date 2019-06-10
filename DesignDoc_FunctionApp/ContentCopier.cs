@@ -33,8 +33,10 @@ namespace DesignDoc_FunctionApp
         public void Start()
         {
 
+            var filePath = Path.Combine(Environment.ExpandEnvironmentVariables("%HOME%"), @"site\wwwroot\Templates", "testfile.txt");
+
             string line;
-            using (System.IO.StreamReader inputFile = new System.IO.StreamReader(@"Templates\" + nameOfTemplate))
+            using (System.IO.StreamReader inputFile = new System.IO.StreamReader(filePath + nameOfTemplate))
             {
                 using (System.IO.StreamWriter outputFile = new System.IO.StreamWriter(Path.Combine(folder.FullName, newFileName), false))
                 {
