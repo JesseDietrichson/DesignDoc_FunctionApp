@@ -130,7 +130,7 @@ namespace DesignDoc_FunctionApp
                 Host = "smtp.live.com", // or "smtp.gmail.com"
                 Port = 587,
                 Username = "learndesigndoc@outlook.com",
-                Password = Environment.GetEnvironmentVariable("emailpw", EnvironmentVariableTarget.Process)
+                Password = "Mslearndoc"
         };
 
             var smtpMailer = new SmtpMailer();

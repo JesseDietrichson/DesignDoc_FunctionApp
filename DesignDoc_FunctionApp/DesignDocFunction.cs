@@ -14,6 +14,8 @@ namespace DesignDoc_FunctionApp
 
             string[] inputData = myQueueItem.Split(":",3);
 
+            
+
             if (inputData[1].Contains(".md"))
             {
                 lock (lockobject)
