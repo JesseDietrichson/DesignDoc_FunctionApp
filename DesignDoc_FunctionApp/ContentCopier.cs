@@ -33,7 +33,7 @@ namespace DesignDoc_FunctionApp
         public void Start()
         {
 
-            var filePath = Path.Combine(Environment.ExpandEnvironmentVariables("%HOME%"), @"site\wwwroot\Templates", "testfile.txt");
+            var filePath = Path.Combine(Environment.ExpandEnvironmentVariables("%HOME%"), @"site\wwwroot\Templates");
 
             string line;
             using (System.IO.StreamReader inputFile = new System.IO.StreamReader(filePath + nameOfTemplate))
