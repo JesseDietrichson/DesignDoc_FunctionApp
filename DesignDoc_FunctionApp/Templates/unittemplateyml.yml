@@ -1,0 +1,17 @@
+### YamlMime:ModuleUnit
+uid: <module uid>.[titlenospace]
+title: [title]
+
+metadata:
+  title: [title]
+  description: [title]
+  ms.date: [date]
+  author: # <github username>
+  ms.author: # <microsoft alias>
+  ms.topic: interactive-tutorial
+  ms.prod: # <product>
+  ROBOTS: NOINDEX
+
+durationInMinutes: # <duration>
+content: |
+  [!include[](includes/[markdown_file_uid].md)]

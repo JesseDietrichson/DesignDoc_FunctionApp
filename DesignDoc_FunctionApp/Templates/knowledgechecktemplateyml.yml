@@ -1,0 +1,53 @@
+### YamlMime:ModuleUnit
+uid: <module uid>.[titlenospace]
+title: [title]
+
+metadata:
+  title: [title]
+  description: [title]
+  ms.date: [date]
+  author: # <github username>
+  ms.author: # <microsoft alias>
+  ms.topic: interactive-tutorial
+  ms.prod: # <product>
+  ROBOTS: NOINDEX
+
+durationInMinutes: # <duration>
+
+quiz:
+  questions:
+  - content: "<question>"
+    choices:
+    - content: "<answer 1>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+    - content: "<answer 2>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+    - content: "<answer 3>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+
+  - content: "<question>"
+    choices:
+    - content: "<answer 1>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+    - content: "<answer 2>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+    - content: "<answer 3>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+
+  - content: "<question>"
+    choices:
+    - content: "<answer 1>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+    - content: "<answer 2>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"
+    - content: "<answer 3>"
+      isCorrect: <true/false>
+      explanation: "<explanation>"

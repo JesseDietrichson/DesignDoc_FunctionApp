@@ -1,0 +1,28 @@
+### YamlMime:Module
+uid: # <module uid>
+metadata:
+  title: [title]
+  description: [summary]
+  ms.date: [date]
+  author: # <github username>
+  ms.author: # <microsoft alias>
+  ms.topic: interactive-tutorial
+  ms.prod: # <product>
+title: [title]
+summary: [summary]
+abstract: |
+  In this module, you will:
+  - [learning_objectives]
+prerequisites: |
+  - [prerequisites]
+iconUrl: # <icon url>
+badge:
+  uid: # <badge uid>
+levels: 
+- [level]
+roles: 
+- [roles]
+products:
+# <products>
+units:
+- [units]
