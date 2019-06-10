@@ -27,7 +27,7 @@ namespace DesignDoc_FunctionApp
         private void createFolders()
         {
             string rootFolderName = NamingHelper.ReplaceSpacesWithHyphen(designDoc.Title);
-            rootFolder = Directory.CreateDirectory(rootFolderName);
+            rootFolder = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(),rootFolderName));
 
             includesFolder = rootFolder.CreateSubdirectory("includes");
             rootFolder.CreateSubdirectory("media");
@@ -118,9 +118,8 @@ namespace DesignDoc_FunctionApp
         {
             Random r = new Random();
             int rNumber = r.Next(1000, 9999);
-            zippedPath = "LearnModule"+ rNumber+".zip";
+            zippedPath = Path.Combine(Path.GetTempPath(), "LearnModule" + rNumber + ".zip");
             ZipFile.CreateFromDirectory(rootFolder.FullName, zippedPath);
-            Console.WriteLine("Zipped file");
         }
 
         public void SendEmail(string who)
