@@ -120,6 +120,7 @@ namespace DesignDoc_FunctionApp
             int rNumber = r.Next(1000, 9999);
             zippedPath = "LearnModule"+ rNumber+".zip";
             ZipFile.CreateFromDirectory(rootFolder.FullName, zippedPath);
+            Console.WriteLine("Zipped file");
         }
 
         public void SendEmail(string who)
