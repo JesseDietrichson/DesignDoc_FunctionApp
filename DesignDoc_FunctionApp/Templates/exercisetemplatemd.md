@@ -1,45 +1,50 @@
-<introduction paragraph>
+<!-- Topic sentence -->
 
-## <Part 1 title>
+<!-- Scenario sub-task -->
 
-<introduction paragraph>
+<!-- Task performed in the exercise -->
 
-1. <step 1>
+<!-- Optional image (this should be either an image of the completed solution or the section that is being completed in the greater solution)-->
 
-1. <step 2>
+## [Part 1 title]
 
-1. <step n>
+<!-- Introduction paragraph -->
 
-## <Part 2 title>
+1. <!-- Step 1 -->
 
-<introduction paragraph>
+1. <!-- Step 2 -->
 
-1. <step 1>
+1. <!-- Step n -->
 
-1. <step 2>
+## [Part 2 title]
 
-1. <step n>
+<!-- Introduction paragraph -->
 
-## <Part n title>
+1. <!-- Step 1 -->
 
-<introduction paragraph>
+1. <!-- Step 2 -->
 
-1. <step 1>
+1. <!-- Step n -->
 
-1. <step 2>
+## [Part n title]
 
-1. <step n>
+<!-- Introduction paragraph -->
 
-## <Result part title>
+1. <!-- Step 1 -->
 
-<introduction paragraph>
+1. <!-- Step 2 -->
 
-1. <optional step 1>
+1. <!-- Step n -->
 
-1. <optional step 2>
+## [Result part title]
 
-1. <optional step n>
+<!-- Introduction paragraph -->
 
+1. <!-- Optional step 1 -->
+
+1. <!-- Optional step 2 -->
+
+1. <!-- Optional step n -->
 
 ## Notes from design doc
 [notes]
