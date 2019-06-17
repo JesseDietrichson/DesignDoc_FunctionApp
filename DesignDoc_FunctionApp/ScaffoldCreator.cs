@@ -56,7 +56,7 @@ namespace DesignDoc_FunctionApp
 
                 if (designDoc.Units[i].IsKnowledgeCheck)
                 {
-                    ContentCopier copier = new ContentCopier("knowledgechecktemplate.yml", rootFolder, markdown_file_uid + ".yml");
+                    ContentCopier copier = new ContentCopier("knowledgechecktemplateyml.yml", rootFolder, markdown_file_uid + ".yml");
                     copier.AddMapping("title", designDoc.Units[i].Title);
                     copier.AddMapping("titlenospace", designDoc.Units[i].ToString());
                     copier.AddMapping("date", DateTime.Now.ToShortDateString());
