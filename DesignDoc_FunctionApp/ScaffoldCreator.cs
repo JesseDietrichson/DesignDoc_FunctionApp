@@ -39,10 +39,10 @@ namespace DesignDoc_FunctionApp
             copier.AddMapping("title", designDoc.Title);
             copier.AddMapping("date", DateTime.Now.ToShortDateString());
             copier.AddMapping("summary", designDoc.Summary);
-            copier.AddMapping("learning_objectives", designDoc.LearningObjectives);
-            copier.AddMapping("prerequisites", designDoc.Prerequisites);
-            copier.AddMapping("level", designDoc.Level);
-            copier.AddMapping("roles", designDoc.Roles);
+            copier.AddMapping("learning_objectives", designDoc.LearningObjectives, true);
+            copier.AddMapping("prerequisites", designDoc.Prerequisites, true);
+            copier.AddMapping("level", designDoc.Level.ToLower());
+            copier.AddMapping("roles", designDoc.GetRolesForIndexYml());
             //copier.AddMapping("products", designDoc.Products);
             copier.AddMapping("units", designDoc.GetUnitsForIndexYml());
             copier.Start();

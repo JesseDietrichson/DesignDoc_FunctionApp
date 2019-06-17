@@ -15,7 +15,7 @@ abstract: |
   - [learning_objectives]
 prerequisites: |
   - [prerequisites]
-iconUrl: # <icon url>
+iconUrl: http://via.placeholder.com/120x120
 badge:
   uid: # <badge uid>
 levels: 

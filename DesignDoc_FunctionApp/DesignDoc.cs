@@ -20,6 +20,10 @@ namespace DesignDoc_FunctionApp
         {
             return Units.ConvertAll<string>((u) => "<module uid>." + u.ToString());
         }
+        public List<string> GetRolesForIndexYml()
+        {
+            return Roles.ConvertAll<string>((u) => NamingHelper.ReplaceSpacesWithHyphen(u));
+        }
 
     }
 }
