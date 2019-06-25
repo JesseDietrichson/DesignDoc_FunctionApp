@@ -44,7 +44,7 @@ namespace DesignDoc_FunctionApp
         }
         public override string ToString()
         {
-            return NamingHelper.ReplaceSpacesWithHyphen(Title);
+            return NamingHelper.ReplaceSpacesWithHyphen(Title,true);
         }
     }
 }
