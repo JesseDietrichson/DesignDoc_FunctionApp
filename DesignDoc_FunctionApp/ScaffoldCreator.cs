@@ -68,10 +68,9 @@ namespace DesignDoc_FunctionApp
                 }
 
                 copier.AddMapping("title", designDoc.Units[i].Title);
-                copier.AddMapping("titlenospace", designDoc.Units[i].ToString());
                 copier.AddMapping("date", DateTime.Now.ToShortDateString());
                 copier.AddMapping("markdown_file_uid", markdown_file_uid);
-                copier.AddMapping("module_uid", moduleUID);
+                copier.AddMapping("unit_uid", moduleUID + "." + designDoc.Units[i].ToString());
                 copier.Start();
             }
         }
