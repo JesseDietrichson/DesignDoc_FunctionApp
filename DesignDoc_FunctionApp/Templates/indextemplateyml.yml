@@ -17,7 +17,7 @@ prerequisites: |
   - [prerequisites]
 iconUrl: http://via.placeholder.com/120x120
 badge:
-  uid: # <badge uid>
+  uid: [module_uid].badge
 levels: 
 - [level]
 roles: 
