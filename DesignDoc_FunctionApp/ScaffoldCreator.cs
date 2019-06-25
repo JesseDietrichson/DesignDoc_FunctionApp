@@ -47,6 +47,7 @@ namespace DesignDoc_FunctionApp
             copier.AddMapping("roles", designDoc.GetRolesForIndexYml());
             //copier.AddMapping("products", designDoc.Products);
             copier.AddMapping("units", designDoc.GetUnitsForIndexYml(moduleUID));
+            copier.AddMapping("module_uid", moduleUID);
             copier.Start();
         }
 
@@ -56,24 +57,22 @@ namespace DesignDoc_FunctionApp
             {
                 string markdown_file_uid = (i + 1).ToString() + "-" + NamingHelper.ReplaceSpacesWithHyphen(designDoc.Units[i].Title,true);
 
+                ContentCopier copier;
                 if (designDoc.Units[i].IsKnowledgeCheck)
                 {
-                    ContentCopier copier = new ContentCopier("knowledgechecktemplateyml.yml", rootFolder, markdown_file_uid + ".yml");
-                    copier.AddMapping("title", designDoc.Units[i].Title);
-                    copier.AddMapping("titlenospace", designDoc.Units[i].ToString());
-                    copier.AddMapping("date", DateTime.Now.ToShortDateString());
-                    copier.AddMapping("markdown_file_uid", markdown_file_uid);
-                    copier.Start();
+                    copier = new ContentCopier("knowledgechecktemplateyml.yml", rootFolder, markdown_file_uid + ".yml");
                 }
                 else
                 {
-                    ContentCopier copier = new ContentCopier("unittemplateyml.yml", rootFolder, markdown_file_uid + ".yml");
-                    copier.AddMapping("title", designDoc.Units[i].Title);
-                    copier.AddMapping("titlenospace", designDoc.Units[i].ToString());
-                    copier.AddMapping("date", DateTime.Now.ToShortDateString());
-                    copier.AddMapping("markdown_file_uid", markdown_file_uid);
-                    copier.Start();
+                    copier = new ContentCopier("unittemplateyml.yml", rootFolder, markdown_file_uid + ".yml");
                 }
+
+                copier.AddMapping("title", designDoc.Units[i].Title);
+                copier.AddMapping("titlenospace", designDoc.Units[i].ToString());
+                copier.AddMapping("date", DateTime.Now.ToShortDateString());
+                copier.AddMapping("markdown_file_uid", markdown_file_uid);
+                copier.AddMapping("module_uid", moduleUID);
+                copier.Start();
             }
         }
 
