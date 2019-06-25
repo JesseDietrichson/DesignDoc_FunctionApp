@@ -16,13 +16,13 @@ namespace DesignDoc_FunctionApp
         public List<string> LearningObjectives { get; set; } = new List<string>();
         public List<Unit> Units { get; set; } = new List<Unit>();
 
-        public List<string> GetUnitsForIndexYml()
+        public List<string> GetUnitsForIndexYml(string moduleUID)
         {
-            return Units.ConvertAll<string>((u) => "<module uid>." + u.ToString());
+            return Units.ConvertAll<string>((u) => moduleUID+"." + u.ToString());
         }
         public List<string> GetRolesForIndexYml()
         {
-            return Roles.ConvertAll<string>((u) => NamingHelper.ReplaceSpacesWithHyphen(u));
+            return Roles.ConvertAll<string>((u) => NamingHelper.ReplaceSpacesWithHyphen(u,false));
         }
 
     }

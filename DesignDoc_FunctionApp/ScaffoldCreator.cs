@@ -12,10 +12,12 @@ namespace DesignDoc_FunctionApp
         private DirectoryInfo rootFolder;
         private DirectoryInfo includesFolder;
         private string zippedPath;
+        private string moduleUID;
 
-        public ScaffoldCreator(DesignDoc designDoc)
+        public ScaffoldCreator(DesignDoc designDoc, string moduleUID)
         {
             this.designDoc = designDoc;
+            this.moduleUID = moduleUID;
 
             createFolders();
             createIndexYmlFile();
@@ -26,7 +28,7 @@ namespace DesignDoc_FunctionApp
 
         private void createFolders()
         {
-            string rootFolderName = NamingHelper.ReplaceSpacesWithHyphen(designDoc.Title);
+            string rootFolderName = NamingHelper.ReplaceSpacesWithHyphen(designDoc.Title,true);
             rootFolder = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(),rootFolderName));
 
             includesFolder = rootFolder.CreateSubdirectory("includes");
@@ -44,7 +46,7 @@ namespace DesignDoc_FunctionApp
             copier.AddMapping("level", designDoc.Level.ToLower());
             copier.AddMapping("roles", designDoc.GetRolesForIndexYml());
             //copier.AddMapping("products", designDoc.Products);
-            copier.AddMapping("units", designDoc.GetUnitsForIndexYml());
+            copier.AddMapping("units", designDoc.GetUnitsForIndexYml(moduleUID));
             copier.Start();
         }
 
@@ -52,7 +54,7 @@ namespace DesignDoc_FunctionApp
         {
             for (int i = 0; i < designDoc.Units.Count; i++)
             {
-                string markdown_file_uid = (i + 1).ToString() + "-" + NamingHelper.ReplaceSpacesWithHyphen(designDoc.Units[i].Title);
+                string markdown_file_uid = (i + 1).ToString() + "-" + NamingHelper.ReplaceSpacesWithHyphen(designDoc.Units[i].Title,true);
 
                 if (designDoc.Units[i].IsKnowledgeCheck)
                 {
@@ -79,7 +81,7 @@ namespace DesignDoc_FunctionApp
         {
             for (int i = 0; i < designDoc.Units.Count; i++)
             {
-                string markdown_file_uid = (i + 1).ToString() + "-" + NamingHelper.ReplaceSpacesWithHyphen(designDoc.Units[i].Title);
+                string markdown_file_uid = (i + 1).ToString() + "-" + NamingHelper.ReplaceSpacesWithHyphen(designDoc.Units[i].Title,true);
 
                 if (designDoc.Units[i].IsKnowledgeCheck)
                 {

@@ -12,7 +12,7 @@ namespace DesignDoc_FunctionApp
         public static void Run([QueueTrigger("designdocqueue", Connection = "designdocqueueconnectionstring")]string myQueueItem, ILogger log)
         {
 
-            string[] inputData = myQueueItem.Split(":",3);
+            string[] inputData = myQueueItem.Split(":",4);
 
             
 
@@ -20,9 +20,9 @@ namespace DesignDoc_FunctionApp
             {
                 lock (lockobject)
                 {
-                    string markdown = inputData[2];
+                    string markdown = inputData[3];
                     DesignDocParser parser = new DesignDocParser(markdown);
-                    ScaffoldCreator c = new ScaffoldCreator(parser.DesignDocument);
+                    ScaffoldCreator c = new ScaffoldCreator(parser.DesignDocument,inputData[2]);
                     c.SendEmail(inputData[0]);
                 }
             }

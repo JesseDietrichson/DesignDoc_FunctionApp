@@ -67,7 +67,7 @@ namespace DesignDoc_FunctionApp
                                 {
                                     foreach (var value in item.Value.Value)
                                     {
-                                        outputFile.WriteLine(item.Value.ShouldIndent ? "\t- " + value : "- " + value);
+                                        outputFile.WriteLine(item.Value.ShouldIndent ? "  - " + value : "- " + value);
                                     }
                                 }
                                 found = true;
